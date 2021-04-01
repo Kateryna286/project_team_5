@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": ";AAAA;;;GAGG",
+    "sources": [
+        "main.scss",
+        "_header.scss",
+        "_hero.scss",
+        "_advantages.scss",
+        "_problems.scss",
+        "_how-we-do.scss",
+        "_program.scss",
+        "_benefits.scss",
+        "_about.scss",
+        "_guarantee.scss",
+        "_reviews.scss",
+        "_contacts.scss",
+        "_footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
