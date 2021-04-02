@@ -110,6 +110,11 @@
   padding: 0 10px 0 28px;
   border: 1px solid $light-text-color;
   background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  color: $light-text-color;
 
   &--first {
     margin-top: 30px;
@@ -132,6 +137,8 @@
     width: 478px;
     height: 70px;
     padding: 0 10px 0 40px;
+    font-size: 20px;
+    line-height: 24px;
 
     &--first {
       margin-top: 56px;
@@ -151,6 +158,14 @@
       line-height: 24px;
     }
   }
+}
+
+.contacts__input:not(:placeholder-shown):required:valid {
+  border-color: rgb(109, 170, 109);
+}
+
+.contacts__input:not(:placeholder-shown):required:invalid {
+  border-color: rgb(175, 57, 57);
 }
 
 .contacts__btn {
