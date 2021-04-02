@@ -1,0 +1,15 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-title($color) {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.304;
+  letter-spacing: 0.03em;
+  color: $color;
+}
