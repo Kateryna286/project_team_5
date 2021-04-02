@@ -4,12 +4,20 @@
 
   min-width: 280px;
 
+
   @media screen and (min-width: 480px) {
     max-width: 480px;
+  padding-left: $containet-padding-mobile;
+  padding-right: $containet-padding-mobile;
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+
 
     padding: 0 $container-padding-tablet;
   }
@@ -18,5 +26,15 @@
     max-width: 1344px;
 
     padding: 0 $container-padding-desktop;
+
+    padding-left: $containet-padding-tablet;
+    padding-right: $containet-padding-tablet;
+  }
+
+  @media screen and (min-width: $desctop) {
+    max-width: $desctop;
+
+    padding-left: $containet-padding-desctop;
+    padding-right: $containet-padding-desctop;
   }
 }
