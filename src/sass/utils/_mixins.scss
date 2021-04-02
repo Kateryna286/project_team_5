@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-@mixin section-title($color) {
+@mixin section-title-desctop($color) {
   font-family: $main-font;
   font-style: normal;
   font-weight: 800;
