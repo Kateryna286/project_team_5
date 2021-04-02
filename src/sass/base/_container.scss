@@ -2,7 +2,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  padding: 0 $container-padding-mobile;
+  padding: $container-padding-mobile;
 
   min-width: 280px;
 
@@ -13,12 +13,12 @@
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
 
-    padding: 0 $container-padding-tablet;
+    padding: $container-padding-tablet;
   }
 
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
 
-    padding: 0 $container-padding-desktop;
+    padding: $container-padding-desktop;
   }
 }
