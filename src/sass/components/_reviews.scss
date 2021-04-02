@@ -1,4 +1,5 @@
 .review {
+  @include flex-center;
   padding: 50px 0;
 }
 
@@ -10,24 +11,42 @@
   text-align: center;
   letter-spacing: 0.03em;
 
+  @media (min-width: $tablet) {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.308;
+    letter-spacing: 0.03em;
+  }
+
   @media (min-width: $desktop) {
     @include section-title-desktop($primary-text-color);
   }
 }
 
 .slider {
+  @include flex-center;
   margin-top: 20px;
+
+  @media (min-width: $tablet) {
+    margin-top: 30px;
+  }
+
   @media (min-width: $desktop) {
-    @include flex-center;
     margin-top: 50px;
   }
 }
 
 .slider__item {
-  padding: 20px 20px 0 20px;
-  @media (min-width: $desktop) {
-    display: flex;
+  padding: 20px 20px 30px 20px;
 
+  @media (min-width: $tablet) {
+    @include flex-center;
+    width: 688px;
+    padding: 40px;
+  }
+
+  @media (min-width: $desktop) {
     width: 1090px;
     padding: 50px 0;
 
@@ -39,6 +58,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: $tablet) {
+    margin-right: 46px;
+  }
+
   @media (min-width: $desktop) {
     margin-right: 40px;
   }
@@ -58,13 +82,13 @@
 }
 
 .slider__icon {
-  width: 30px;
-  height: 30px;
-
   margin: 0 auto;
+  fill: #436eab;
+  @include transition(fill);
 
-  background-color: tomato;
-  @media (min-width: $desktop) {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
   }
 }
 
@@ -83,13 +107,15 @@
   letter-spacing: 0.08em;
   color: $accent-color;
 
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
   @media (min-width: $desktop) {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: 800;
     font-size: 30px;
     line-height: 1.233;
-    letter-spacing: 0.08em;
   }
 }
 
@@ -103,15 +129,20 @@
   text-align: center;
   letter-spacing: 0.08em;
   color: $secondary-text-color;
+
+  @media (min-width: $tablet) {
+    width: 412px;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: left;
+  }
+
   @media (min-width: $desktop) {
+    width: 438px;
     margin-bottom: 20px;
 
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 1.214;
-    letter-spacing: 0.08em;
   }
 }
 
@@ -123,10 +154,15 @@
   text-align: center;
   color: $third-text-color;
 
+  @media (min-width: $tablet) {
+    width: 412px;
+    font-size: 12px;
+    line-height: 1.667;
+    text-align: left;
+  }
+
   @media (min-width: $desktop) {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: 500;
+    width: 706px;
     font-size: 18px;
     line-height: 1.556;
   }
@@ -138,36 +174,62 @@
 }
 
 .slider__pagination {
-  @include flex-center;
+  // display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   width: 182px;
-
   margin: 20px auto 0 auto;
 
-  @media (min-width: $desktop) {
-    width: 558px;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    margin: 40px auto 0 auto;
+    width: 558px;
   }
 }
 
+.slider__pagination-item {
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(8) {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+// .slider__pagination {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   width: 182px;
+
+//   margin: 20px auto 0 auto;
+
+//   @media (min-width: $desktop) {
+//     width: 558px;
+
+//     margin: 40px auto 0 auto;
+//   }
+// }
+
 // .slider__pagination-item {
-//   &:nth-child(2),
-//   &:nth-child(3),
-//   &:nth-child(4) {
-//     width: 54px;
-//     height: 54px;
-//     background-color: tomato;
+//   &:nth-child(5),
+//   &:nth-child(6),
+//   &:nth-child(7),
+//   &:nth-child(8) {
+//     display: none;
 //   }
+// }
 
-//   &:first-child,
-//   &:last-child {
-//     width: 25px;
-//     height: 2px;
-//     background-color: tomato;
-//   }
-
-//   &:not(:last-child) {
-//     margin-right: 10px;
-//   }
+// .slider__pagination-icon {
+//   width: 50px;
+//   height: 50px;
+//   background-color: tomato;
 // }
