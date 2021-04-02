@@ -9,8 +9,8 @@
                 С вами свяжется консультант и ответит на вопросы
             </label>
             <input class="contacts__input contacts__input--first" type="text" name="name" id="name" placeholder="Имя*"
-                required>
-            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*" required>
+                title="Введите имя" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{1,}" required>
+            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*" pattern="[0-9]{6,}" title="Введите верный номер телефона" required>
             <button class="contacts__btn" type="submit">ХОЧУ НА БЕСПЛАТНОЕ ЗАНЯТИЕ</button>
         </form>
     </div>

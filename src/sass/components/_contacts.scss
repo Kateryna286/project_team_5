@@ -110,6 +110,7 @@
   padding: 0 10px 0 28px;
   border: 1px solid $light-text-color;
   background-color: transparent;
+  color: $light-text-color;
 
   &--first {
     margin-top: 30px;
@@ -151,6 +152,14 @@
       line-height: 24px;
     }
   }
+}
+
+.contacts__input:not(:placeholder-shown):required:valid {
+  border-color: green;
+}
+
+.contacts__input:not(:placeholder-shown):required:invalid {
+  border-color: red;
 }
 
 .contacts__btn {
