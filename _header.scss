@@ -1,0 +1,163 @@
+p {
+  margin: 0;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+.container {
+  min-width: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 33px;
+  margin-left: 183px;
+  margin-right: 183px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Header */
+.site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  border-bottom: 1px solid #ffffff;
+}
+
+.site-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 79px;
+}
+
+@media (max-width: 767px) {
+  .site-header__container {
+    min-height: 59px;
+  }
+}
+
+/* Логотип */
+.logo {
+  position: relative;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  font-style: bold;
+  letter-spacing: 0.04em;
+  color: #111518;
+}
+
+.logo--second {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(17, 21, 24, 1);
+}
+
+.logo__icon {
+  position: relative;
+  top: 4px;
+  margin: 0 4px;
+  width: 14.95px;
+  height: 20.39px;
+}
+
+@media screen and(min-width: $tablet) {
+  .logo__icon {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo--accent {
+  color: #ff6b09;
+}
+
+/* Меню в хедері*/
+.menu,
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  list-style: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__list {
+  padding-left: 124px;
+  padding-right: 60px;
+}
+
+@media (max-width: 767px) {
+  .menu__list {
+    display: none;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu__link {
+  color: #b9b9b9;
+  display: flex;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  padding: 27px;
+  text-transform: uppercase;
+  -webkit-transition: color var(--transition-time) var(--cubic-bezier);
+  transition: color var(--transition-time) var(--cubic-bezier);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: #ff6b09;
+}
+
+/* Кнопка "Консультация по телефону" */
+.consultation__button {
+  font-weight: bold;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ff6b09;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #ffffff;
+  border: 2px solid #ff6b09;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  width: 336px;
+  height: 70px;
+}
