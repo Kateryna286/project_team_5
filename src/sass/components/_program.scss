@@ -1,4 +1,5 @@
 .program {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -21,6 +22,20 @@
     margin-left: 73px;
 
     border-left: 1px solid #fff;
+
+    &::after {
+      position: absolute;
+      bottom: -47px;
+      left: 200px;
+      content: '';
+      display: block;
+      width: 176px;
+      height: 137px;
+      background-image: url('../images/program_mobile.png');
+      background-size: 176px 137px;
+
+      z-index: 100;
+    }
   }
 
   &__item {
