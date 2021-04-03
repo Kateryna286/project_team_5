@@ -1,0 +1,85 @@
+.hero-section {
+  padding-top: 50px;
+  padding-bottom: 0;
+  height: 618px;
+}
+
+.hero-container {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $light-text-color;
+  background: url('/images/hero_Group57.png') no-repeat right 50% bottom 25%,
+    url('/images/hero_Vector.png') no-repeat center bottom;
+  background-size: 208px 177.5px, cover;
+  box-shadow: inset -5px 21px 26px rgba(167, 111, 111, 0.04);
+
+  @media screen and (min: device pixel ratio 2px),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/images/hero_Group57@2x.png'), url('/images/hero_Vector@2x.png');
+  }
+}
+
+.hero-title {
+  max-width: 280px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.35;
+  /* or 27px */
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
+.hero-subtitle {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.57;
+  /* or 157% */
+  /* or 22px*/
+  letter-spacing: 0.08em;
+
+  color: $secondary-text-color;
+
+  &--bold {
+    display: block;
+    font-weight: 700;
+    color: $primary-text-color;
+  }
+
+  &--accent {
+    color: $accent-color;
+    font-weight: 700;
+  }
+}
+
+.hero-button {
+  width: 260px;
+  height: 48px;
+  padding: 14px 1px;
+  border: 2px solid transparent;
+  background-color: $accent-color;
+  margin-bottom: 30px;
+
+  &__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $light-text-color;
+  }
+}
