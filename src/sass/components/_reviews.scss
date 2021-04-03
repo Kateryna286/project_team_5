@@ -38,6 +38,8 @@
 }
 
 .slider__item {
+  position: relative;
+
   padding: 20px 20px 30px 20px;
 
   @media (min-width: $tablet) {
@@ -90,10 +92,6 @@
   &:focus {
     fill: $accent-color;
   }
-}
-
-.slider__text-box {
-  margin-top: 20px;
 }
 
 .slider__title {
@@ -173,8 +171,30 @@
   text-decoration: underline;
 }
 
+.slider__arrow {
+  position: absolute;
+
+  &.arrow--left {
+    left: 0;
+    @media (min-width: $tablet) {
+      top: 25%;
+    }
+    @media (min-width: $desktop) {
+      top: 40%;
+    }
+  }
+  &.arrow--right {
+    right: 0;
+    @media (min-width: $tablet) {
+      top: 25%;
+    }
+    @media (min-width: $desktop) {
+      top: 40%;
+    }
+  }
+}
+
 .slider__pagination {
-  // display: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -202,34 +222,3 @@
     }
   }
 }
-
-// .slider__pagination {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   width: 182px;
-
-//   margin: 20px auto 0 auto;
-
-//   @media (min-width: $desktop) {
-//     width: 558px;
-
-//     margin: 40px auto 0 auto;
-//   }
-// }
-
-// .slider__pagination-item {
-//   &:nth-child(5),
-//   &:nth-child(6),
-//   &:nth-child(7),
-//   &:nth-child(8) {
-//     display: none;
-//   }
-// }
-
-// .slider__pagination-icon {
-//   width: 50px;
-//   height: 50px;
-//   background-color: tomato;
-// }
