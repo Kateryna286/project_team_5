@@ -1,0 +1,87 @@
+// .hero-section {
+//   padding-top: 109px;
+//   padding-bottom: 0;
+// }
+
+.hero-container {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+
+  @include flex-center;
+  flex-direction: column;
+
+  //   height: 537px;
+  padding-top: 109px;
+  padding-bottom: 0;
+  background-image: url('/images/hero_Group57.phg');
+  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
+  background-color: $light-text-color;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  //   @media screen and (min: device pixel ratio 2px),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url('/src/images/hero_Group57@2x.png'), url('/src/images/hero_Vector@2x.png');
+  //   }
+}
+
+.hero-title {
+  width: 280px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.35;
+  /* or 27px */
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
+.hero-subtitle {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.57;
+  /* or 157% */
+  /* or 22px*/
+  letter-spacing: 0.08em;
+
+  color: $secondary-text-color;
+
+  &--bold {
+    display: block;
+    font-weight: 700;
+    color: $primary-text-color;
+  }
+
+  &--accent {
+    color: $accent-color;
+    font-weight: 700;
+  }
+}
+
+.hero-button {
+  width: 260px;
+  height: 48px;
+  padding: 14px 1px;
+  border: 2px solid transparent;
+  background-color: $accent-color;
+  margin-bottom: 30px;
+
+  &__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: $light-text-color;
+  }
+}
