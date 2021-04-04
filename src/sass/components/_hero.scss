@@ -2,9 +2,9 @@
   padding-top: 50px;
   padding-bottom: 0;
 
-  @media screen and (min-width: $tablet) {
-    padding-top: 0px;
-  }
+  // @media screen and (min-width: $tablet) {
+  //   padding-top: 0px;
+  // }
 }
 
 .hero-container {
@@ -30,14 +30,21 @@
   }
 
   @media screen and (min-width: $tablet) {
-    min-height: 506.5px;
+    min-height: 398.5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: start;
     background: url('/images/hero_Group57.png') no-repeat right 5% bottom 64.41px,
-      url('/images/hero_Vector.png') no-repeat center bottom;
+      url('/images/hero_Vector.png') no-repeat bottom;
     background-size: 375.75px 320.64px, cover;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-height: 718px;
+    background: url('/images/hero_Group57.png') no-repeat right bottom,
+      url('/images/hero_Vector.png') no-repeat bottom;
+    background-size: contain, cover;
   }
 }
 
@@ -54,7 +61,6 @@
   color: $primary-text-color;
 
   @media screen and (min-width: $tablet) {
-    max-width: 332px;
     font-size: 26px;
   }
 
@@ -65,21 +71,29 @@
 }
 
 .hero-subtitle {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.57;
   /* or 157% */
   /* or 22px*/
   letter-spacing: 0.08em;
 
-  color: $secondary-text-color;
+  color: $primary-text-color;
 
-  &--bold {
-    display: block;
-    font-weight: 700;
-    color: $primary-text-color;
+  @media screen and (min-width: $desktop) {
+    display: inline;
+  }
+
+  &--grey {
+    font-weight: 500;
+    color: $secondary-text-color;
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
   }
 
   &--accent {
@@ -100,6 +114,12 @@
   border: 2px solid transparent;
   background-color: $accent-color;
 
+  @media screen and (min-width: $desktop) {
+    width: 354px;
+    height: 70px;
+    padding: 26px;
+  }
+
   &__link {
     font-style: normal;
     font-weight: bold;
@@ -112,12 +132,6 @@
 
     @media screen and (min-width: $desktop) {
       font-size: 14px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      width: 354px;
-      height: 70px;
-      padding: 26px;
     }
   }
 }
