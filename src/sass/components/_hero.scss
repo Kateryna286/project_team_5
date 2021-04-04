@@ -1,14 +1,17 @@
 .hero-section {
   padding-top: 50px;
   padding-bottom: 0;
-  height: 618px;
+
+  // @media screen and (min-width: $tablet) {
+  //   padding-top: 0px;
+  // }
 }
 
 .hero-container {
   // position: absolute;
   // top: 0;
   // left: 0;
-  height: 100%;
+  min-height: 618px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +21,30 @@
   background: url('/images/hero_Group57.png') no-repeat right 50% bottom 25%,
     url('/images/hero_Vector.png') no-repeat center bottom;
   background-size: 208px 177.5px, cover;
-  box-shadow: inset -5px 21px 26px rgba(167, 111, 111, 0.04);
+  box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
 
   @media screen and (min: device pixel ratio 2px),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('/images/hero_Group57@2x.png'), url('/images/hero_Vector@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) {
+    min-height: 398.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    background: url('/images/hero_Group57.png') no-repeat right 5% bottom 64.41px,
+      url('/images/hero_Vector.png') no-repeat bottom;
+    background-size: 375.75px 320.64px, cover;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-height: 718px;
+    background: url('/images/hero_Group57.png') no-repeat right bottom,
+      url('/images/hero_Vector.png') no-repeat bottom;
+    background-size: contain, cover;
   }
 }
 
@@ -33,34 +54,56 @@
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
-  line-height: 1.35;
+  line-height: 1.36;
   /* or 27px */
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 642px;
+    font-size: 58px;
+  }
 }
 
 .hero-subtitle {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.57;
   /* or 157% */
   /* or 22px*/
   letter-spacing: 0.08em;
 
-  color: $secondary-text-color;
+  color: $primary-text-color;
 
-  &--bold {
-    display: block;
-    font-weight: 700;
-    color: $primary-text-color;
+  @media screen and (min-width: $desktop) {
+    display: inline;
+  }
+
+  &--grey {
+    font-weight: 500;
+    color: $secondary-text-color;
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
   }
 
   &--accent {
     color: $accent-color;
     font-weight: 700;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.65;
   }
 }
 
@@ -70,7 +113,12 @@
   padding: 14px 1px;
   border: 2px solid transparent;
   background-color: $accent-color;
-  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    width: 354px;
+    height: 70px;
+    padding: 26px;
+  }
 
   &__link {
     font-style: normal;
@@ -81,5 +129,9 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $light-text-color;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 }
