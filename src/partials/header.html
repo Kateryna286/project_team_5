@@ -4,28 +4,41 @@
       <!-- Логотип -->
       <div>
         <p class="logo">
-          Hell<img class="logo__img" src="/images/svg/fire.svg" width="21.56" height="29.99" />EN
+          Hell<svg class="logo__icon">
+            <use href="images/icons-svg/sprite.svg#icon-fire-logo"></use></svg
+          >EN
         </p>
-        <p class="logo--second"><span class="logo--accent">АДСКИЙ</span> АНГЛИЙСКИЙ</p>
+        <p class="logo--second"><span class="accent">АДСКИЙ</span> АНГЛИЙСКИЙ</p>
       </div>
 
       <!-- Стрічка меню -->
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" href="#">Программы обучения</a>
+          <a class="menu__link" href="#program">Программы обучения</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">О нас</a>
+          <a class="menu__link" href="#about">О нас</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Варианты обучения</a>
+          <a class="menu__link" href="#how-we-do">Варианты обучения</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+          <a class="menu__link" href="#contacts">Контакты</a>
         </li>
       </ul>
       <!-- Кнопка -->
       <button class="consultation__button">Консультация по телефону</button>
+      <!-- Кнопка виклику мобільного меню -->
+      <button
+        class="menu-toggle js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="menu-toggle__icon" width="24" height="16">
+          <use href="images/icons-svg/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
     </nav>
   </div>
 </header>
