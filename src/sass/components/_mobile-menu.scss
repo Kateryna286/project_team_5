@@ -24,15 +24,13 @@
 /* Кнопка виклику мобільного меню */
 .menu-toggle {
   position: absolute;
-  top: 10px;
   right: 15px;
+  top: 40px;
   min-height: 40px;
   min-width: 40px;
   display: block;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   color: #ffffff;
   background-color: transparent;
   cursor: pointer;
@@ -97,27 +95,22 @@
   justify-content: center;
 }
 
-@media (max-width: $tablet) {
+@media (min-width: $tablet) {
   .mobile-menu {
-    margin-left: 218px;
-    margin-right: 218px;
-    margin-bottom: 50px;
-    margin-top: 72px;
+    padding-left: 218px;
+    font-size: 26px;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) {
   .mobile-menu {
-    margin-left: 20px;
-    margin-right: 40px;
+    margin-top: 108.53px;
     margin-bottom: 50px;
-    margin-top: 60.53px;
+    font-size: 14px;
   }
 }
 
 .mobile-menu__list {
-  margin: 0;
-  padding: 0;
   font-style: normal;
   color: #ffffff;
   font-style: normal;
