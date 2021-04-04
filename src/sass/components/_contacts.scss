@@ -172,17 +172,9 @@
 }
 
 .contacts__btn {
-  @include flex-center;
   width: 260px;
   height: 48px;
   margin-top: 50px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: $light-text-color;
-  background-color: $accent-color;
 
   @media screen and(min-width: $tablet) {
     margin-top: 31px;
@@ -192,7 +184,10 @@
     width: 354px;
     height: 70px;
     margin-top: 80px;
-    font-size: 14px;
-    line-height: 1.21;
   }
+
+  // &:hover,
+  // &:focus {
+  //   background-color: $light-text-color;
+  // }
 }
