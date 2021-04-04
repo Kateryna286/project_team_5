@@ -1,18 +1,18 @@
 .program {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 537px;
+  padding-bottom: 50px;
 
   background-color: $dark-background-color;
 
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
-    padding-bottom: 392px;
+    padding-bottom: 189px;
   }
 
   @media screen and (min-width: $desktop) {
     padding-top: 120px;
-    padding-bottom: 363px;
+    padding-bottom: 164px;
   }
 
   &__header {
@@ -244,24 +244,17 @@
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     height: 646px;
   }
+}
 
-  .block-for-tborder {
-    position: absolute;
+.block-for-tborder {
+  position: absolute;
+
+  @media screen and (min-width: $desktop) {
     width: 100%;
     height: 20px;
-    position: absolute;
     border-top: 1px solid white;
     top: 278px;
     left: 0;
-
-    @media screen and (min-width: $desktop) {
-      width: 100%;
-      height: 20px;
-      position: absolute;
-      border-top: 1px solid white;
-      top: 278px;
-      left: 0;
-    }
   }
 }
 
@@ -269,7 +262,6 @@
   position: absolute;
   display: block;
   content: '';
-  z-index: 100;
 
   @media screen and (max-width: $tablet - 1px) {
     top: 1239px;
@@ -303,11 +295,11 @@
 
   @media screen and (min-width: $desktop) {
     top: 398px;
-    left: -229px;
-    width: 760px;
-    height: 502px;
+    left: -164px;
+    width: 676px;
+    height: 510px;
     background-image: url('../images/program_desk.png');
-    background-size: 760px 502px;
+    background-size: 676px 510px;
   }
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
