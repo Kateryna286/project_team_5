@@ -49,7 +49,7 @@
   position: relative;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.21;
   text-align: center;
   letter-spacing: 0.07em;
   color: $primary-text-color;
@@ -57,7 +57,7 @@
 
   @media screen and(min-width: $tablet) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     margin-left: 203px;
     margin-top: 0;
     text-align: left;
@@ -65,7 +65,7 @@
 
   @media screen and(min-width: $desktop) {
     font-size: 30px;
-    line-height: 37px;
+    line-height: 1.23;
     margin-left: 290px;
   }
 }
@@ -131,7 +131,7 @@
   width: 100%;
   font-weight: 500;
   font-size: 14px;
-  line-height: 28px;
+  line-height: 2;
   color: $secondary-text-color;
 
   @media screen and(min-width: $tablet) {
@@ -147,7 +147,7 @@
   position: relative;
   font-weight: 800;
   font-size: 17px;
-  line-height: 32px;
+  line-height: 1.88;
   letter-spacing: 0.04em;
   color: $primary-text-color;
 }
@@ -155,7 +155,7 @@
 @media (min-width: $tablet) {
   .logo {
     font-size: 26px;
-    line-height: 32px;
+    line-height: 1.23;
   }
 }
 
@@ -174,7 +174,7 @@
     top: 0;
     left: 1px;
     font-size: 8px;
-    line-height: 10px;
+    line-height: 1.25;
   }
 
   &--footer {
