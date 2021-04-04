@@ -69,6 +69,7 @@
   -ms-flex-align: center;
   list-style: none;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .menu__list {
@@ -105,10 +106,9 @@
   color: #ff6b09;
 }
 
-
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
-  right: 75px;
+  right: 95px;
   top: 33.5px;
   display: block;
   box-sizing: border-box;
@@ -126,10 +126,16 @@
   }
 }
 
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .consultation__button {
+    height: 30px;
+  }
+}
+
 @media (min-width: $desktop) {
   .consultation__button {
     width: 336px;
-    height: 70px;
+    height: 79px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -139,7 +145,7 @@
   .consultation__button {
     position: absolute;
     width: 260px;
-    height: 48px;
+    height: 46px;
     font-size: 12px;
     line-height: 15px;
   }
