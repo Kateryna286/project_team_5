@@ -1,0 +1,78 @@
+// <a href='#contacts' class='btn'> хочу на бесплатное занятие</a>
+// <a href='#contacts' class='btn-reverse'> хочу на бесплатное занятие</a>
+
+.btn {
+  display: inline-block;
+  padding: 14px;
+  margin: 0 auto;
+
+  border: 2px solid $accent-color;
+  background-color: $accent-color;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $light-text-color;
+
+  @include transition(color);
+  @include transition(background-color);
+
+  @media screen and (min-width: $desktop) {
+    padding: 26px 24px;
+
+    font-size: 14px;
+    line-height: 1.214;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    color: $accent-color;
+
+    background-color: transparent;
+  }
+}
+
+.btn-reverse {
+  display: inline-block;
+  padding: 14px;
+  margin: 0 auto;
+
+  border: 2px solid $accent-color;
+  background-color: transparent;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent-color;
+
+  @include transition(color);
+  @include transition(background-color);
+
+  @media screen and (min-width: $tablet) {
+    padding: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 26px 24px;
+
+    font-size: 14px;
+    line-height: 1.214;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    color: $light-text-color;
+
+    background-color: $accent-color;
+  }
+}
