@@ -71,11 +71,15 @@
 .contacts__form {
   @include flex-center;
   flex-direction: column;
+  margin-top: 30px;
+
+  @media screen and(min-width: $desktop) {
+    margin-top: 50px;
+  }
 }
 
 .contacts__label {
   min-width: 280px;
-  margin-top: 30px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.25;
@@ -98,7 +102,6 @@
     width: 1090px;
     font-size: 30px;
     line-height: 1.23;
-    margin-top: 50px;
   }
 }
 
@@ -178,7 +181,7 @@
   line-height: 1.25;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $light-text-color;
   background-color: $accent-color;
 
   @media screen and(min-width: $tablet) {
