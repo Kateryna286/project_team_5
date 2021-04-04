@@ -1,17 +1,15 @@
 .benefits {
-  position: relative;
+  background-image: linear-gradient($primary-text-color 50%, $light-text-color 50%);
+}
+.container {
 }
 
 .benefits__cards {
-  z-index: 100;
-  position: absolute;
-  top: -223px;
-  left: 0;
+  margin-left: auto;
+  margin-right: auto;
   @include flex-center;
   background-color: $light-text-color;
   max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media screen and (min-width: $tablet) {
   .benefits__cards {
