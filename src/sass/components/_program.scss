@@ -1,18 +1,18 @@
 .program {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 537px;
 
-  background-color: #111518;
+  background-color: $dark-background-color;
 
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
-    padding-bottom: 189px;
+    padding-bottom: 392px;
   }
 
   @media screen and (min-width: $desktop) {
     padding-top: 120px;
-    padding-bottom: 164px;
+    padding-bottom: 363px;
   }
 
   &__header {
@@ -93,7 +93,7 @@
       height: 12px;
       width: 12px;
       border-radius: 50%;
-      background: #ff6b09;
+      background: $accent-color;
       z-index: 1;
 
       @media screen and (min-width: $desktop) {
@@ -111,7 +111,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: $light-text-color;
 
     @media screen and (min-width: $desktop) {
       font-size: 20px;
@@ -167,7 +167,7 @@
 
     letter-spacing: 0.08em;
 
-    color: #ff6b09;
+    color: $accent-color;
 
     @media screen and (min-width: $desktop) {
       padding-left: 10px;
@@ -185,7 +185,7 @@
       display: block;
       height: 1px;
       width: 10px;
-      background: #ff6b09;
+      background: $accent-color;
 
       @media screen and (min-width: $desktop) {
         top: 12px;
@@ -214,7 +214,7 @@
 
     letter-spacing: 0.08em;
 
-    color: #b9b9b9;
+    color: $secondary-text-color;
 
     opacity: 0.5;
 
@@ -226,10 +226,10 @@
 }
 
 .ghost-text {
-  color: #111518;
+  color: transparent;
 }
 
-.block-for-border {
+.block-for-lborder {
   position: absolute;
 
   @media screen and (max-width: $desktop - 1px) {
@@ -241,17 +241,27 @@
     border-left: 1px solid #fff;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     height: 646px;
   }
 
-  @media screen and (min-width: $desktop) {
-    border-top: 1px solid #fff;
-
-    width: 200vw;
+  .block-for-tborder {
+    position: absolute;
+    width: 100%;
     height: 20px;
-    top: -61px;
-    left: -300px;
+    position: absolute;
+    border-top: 1px solid white;
+    top: 278px;
+    left: 0;
+
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      border-top: 1px solid white;
+      top: 278px;
+      left: 0;
+    }
   }
 }
 
