@@ -1,6 +1,5 @@
 /* Header */
 .site-header {
-  top: 0;
   background-color: white;
   z-index: 1;
   border-bottom: 1px solid #ffffff;
@@ -12,6 +11,7 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: 79px;
+  padding-top: 33.5px;
 }
 
 @media (max-width: 1343px) {
@@ -49,7 +49,7 @@
   height: 20.39px;
 }
 
-@media screen and(min-width: $tablet) {
+@media screen and (min-width: $tablet) {
   .logo__icon {
     width: 22px;
     height: 30px;
@@ -108,14 +108,9 @@
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
   position: absolute;
-  top: 10px;
-  right: 101px;
-  line-height: 32px;
+  right: 75px;
+  top: 33.5px;
   display: block;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   text-transform: uppercase;
   color: #ff6b09;
@@ -133,6 +128,18 @@
 
 @media (min-width: $desktop) {
   .consultation__button {
-    right: 191px;
+    width: 336px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .consultation__button {
+    width: 260px;
+    height: 48px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
