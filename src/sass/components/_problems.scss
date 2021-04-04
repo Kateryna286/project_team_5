@@ -2,7 +2,7 @@
   background-image: linear-gradient(#000000 76.4%, #ffffff 76.4%);
 }
 .problems__title {
-  width: 220px;
+  //   min-width: 200px;
   font-family: 'Montserrat';
   font-size: 20px;
   font-weight: 800;
@@ -11,6 +11,13 @@
   padding: 50px 0px 27px;
   color: $light-text-color;
 }
+@media screen and (min-width: $desktop) {
+  .problems__title {
+    font-size: 46px;
+    line-height: 1.3;
+    padding: 100px 0 70px;
+  }
+}
 .problems__title--accent {
   color: $accent-color;
 }
@@ -18,28 +25,74 @@
   position: absolute;
   transform: translateY(9999px);
 }
+@media screen and (min-width: $desktop) {
+  .problems__svg {
+    transform: translateY(9999px);
+  }
+}
 .problems__cards {
   @include flex-center;
   background-color: $light-text-color;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: $tablet) {
+  .problems__cards {
+    max-width: 688px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .problems__cards {
+    max-width: 1314px;
+  }
 }
 .problems__list {
-  //   @include flex-center;
-  //   flex-wrap: wrap;
   list-style: none;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 700;
   line-height: 1.428;
-
   color: $primary-text-color;
   padding: 20px 30px;
-
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-
   counter-reset: list;
+}
+@media screen and (min-width: $tablet) {
+  .problems__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 96px 26px;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .problems__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 38px 114px 62px;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }
 .problems__list li {
   padding-bottom: 10px;
+  max-width: 220px;
+}
+@media screen and (min-width: $tablet) {
+  .problems__list li {
+    flex-basis: calc((100% -84px) / 2);
+    max-width: 220px;
+    padding-bottom: 0px;
+    padding-top: 32px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .problems__list li {
+    flex-basis: calc((100% -10px) / 3);
+    max-width: 316px;
+  }
 }
 .problems__list li::before {
   content: '— 0 ' counter(list);
@@ -51,4 +104,11 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.219;
+}
+@media screen and (min-width: $desktop) {
+  .problems__list li::before {
+    font-size: 20px;
+    line-height: 1.6;
+    padding-bottom: 10px;
+  }
 }
