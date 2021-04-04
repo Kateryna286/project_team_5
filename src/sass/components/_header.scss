@@ -72,8 +72,8 @@
 }
 
 .menu__list {
-  padding-left: 124px;
-  padding-right: 60px;
+  margin-left: 104px;
+  margin-right: 10px;
 }
 
 @media (max-width: 1343px) {
@@ -83,7 +83,7 @@
 }
 
 .menu__item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .menu__link {
