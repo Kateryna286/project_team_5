@@ -1,6 +1,48 @@
 .hero-section {
+  width: 100%;
+  min-height: 559px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 50px;
   padding-bottom: 0;
+
+  background-color: $light-text-color;
+  background: url('/images/hero_Group57.png') no-repeat top 335px center,
+    url('/images/hero_Vector.png') no-repeat center bottom;
+  background-size: 208px 177.5px, cover;
+  box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
+
+  @media screen and (min: device pixel ratio 2px),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('/images/hero_Group57@2x.png'), url('/images/hero_Vector@2x.png');
+  }
+
+  @media screen and (min-width: $mobile) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    padding-top: 70px;
+    background: url('/images/hero_Group57.png') no-repeat right top 83.43px,
+      url('/images/hero_Vector.png') no-repeat bottom left;
+    background-size: 375.75px 320.64px, cover;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1344px;
+    background: url('/images/hero_Group57.png') no-repeat right top 46px,
+      url('/images/hero_Vector.png') no-repeat bottom left;
+    background-size: 699px 576px, cover;
+  }
+
+  @media screen and (min-width: 1688px) {
+    max-width: 1688px;
+    background: url('/images/hero_Group57.png') no-repeat right top 45px,
+      url('/images/hero_Vector.png') no-repeat bottom;
+    background-size: 841.55px 718.14px, cover;
+  }
 
   // @media screen and (min-width: $tablet) {
   //   padding-top: 0px;
@@ -17,34 +59,40 @@
   align-items: center;
   justify-content: flex-start;
 
-  background-color: $light-text-color;
-  background: url('/images/hero_Group57.png') no-repeat right 50% bottom 25%,
-    url('/images/hero_Vector.png') no-repeat center bottom;
-  background-size: 208px 177.5px, cover;
-  box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
+  //  background-color: $light-text-color;
+  //   background: url('/images/hero_Group57.png') no-repeat right 50% bottom 25%,
+  //     url('/images/hero_Vector.png') no-repeat center bottom;
+  //   background-size: 208px 177.5px, cover;
+  //   box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
 
-  @media screen and (min: device pixel ratio 2px),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('/images/hero_Group57@2x.png'), url('/images/hero_Vector@2x.png');
-  }
+  //   @media screen and (min: device pixel ratio 2px),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url('/images/hero_Group57@2x.png'), url('/images/hero_Vector@2x.png');
+  //   }
 
   @media screen and (min-width: $tablet) {
     min-height: 398.5px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: start;
-    background: url('/images/hero_Group57.png') no-repeat right 5% bottom 64.41px,
-      url('/images/hero_Vector.png') no-repeat bottom;
-    background-size: 375.75px 320.64px, cover;
   }
+
+  //   background: url('/images/hero_Group57.png') no-repeat right 5% bottom 64.41px,
+  //     url('/images/hero_Vector.png') no-repeat bottom;
+  //   background-size: 375.75px 320.64px, cover;
+  // }
 
   @media screen and (min-width: $desktop) {
     min-height: 718px;
-    background: url('/images/hero_Group57.png') no-repeat right bottom,
-      url('/images/hero_Vector.png') no-repeat bottom;
-    background-size: contain, cover;
+    max-width: 1344px;
+  }
+
+  @media screen and (min-width: 1688px) {
+    min-height: 718px;
+    width: 1344px;
+
+    // background: url('/images/hero_Group57.png') no-repeat right top,
+    //   url('/images/hero_Vector.png') no-repeat bottom;
+    // background-size: 788px 675px, cover;
   }
 }
 
