@@ -56,20 +56,6 @@
 
       padding-top: 60px;
     }
-
-    // &::after {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   content: '';
-    //   display: block;
-    //   width: 176px;
-    //   height: 137px;
-    //   background-image: url('../images/program_mobile.png');
-    //   background-size: 176px 137px;
-
-    //   z-index: 100;
-    // }
   }
 
   &__item {
@@ -266,5 +252,28 @@
     height: 20px;
     top: -61px;
     left: -300px;
+  }
+}
+
+.program__list::after {
+  position: absolute;
+  display: block;
+  content: '';
+
+  @media screen and (max-width: $tablet - 1px) {
+    top: 1239px;
+    left: 122px;
+    width: 176px;
+    height: 137px;
+    background-image: url('../images/program_mobile.png');
+    background-size: 176px 137px;
+
+    z-index: 100;
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .program__list::after {
+      background-image: url('../images/program_mobile@2x.png');
+    }
   }
 }
