@@ -8,7 +8,7 @@
 
   background-color: $light-text-color;
   background: url('/images/hero_Group57.png') no-repeat top 335px center,
-    url('/images/hero_Vector.png') no-repeat center bottom;
+    url('/images/hero_Vector.png') no-repeat bottom left;
   background-size: 208px 177.5px, cover;
   box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
 
@@ -53,7 +53,7 @@
   // position: absolute;
   // top: 0;
   // left: 0;
-  min-height: 618px;
+  min-height: 509px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +99,7 @@
 .hero-title {
   max-width: 280px;
   margin-bottom: 30px;
-  font-style: normal;
+
   font-weight: 800;
   font-size: 20px;
   line-height: 1.36;
@@ -122,7 +122,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.57;
@@ -133,7 +132,7 @@
   color: $primary-text-color;
 
   @media screen and (min-width: $desktop) {
-    display: inline;
+    display: inline-block;
   }
 
   &--grey {
@@ -156,7 +155,6 @@
 }
 
 .hero-link {
-  display: initial;
   width: 260px;
   height: 48px;
   padding: 14px 1px;
@@ -166,6 +164,5 @@
     width: 354px;
     height: 70px;
     padding: 26px;
-    font-size: 14px;
   }
 }
