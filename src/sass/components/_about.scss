@@ -1,13 +1,5 @@
 .about__title {
-  margin-bottom: 20px;
-
-  @media (min-width: $tablet) {
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 50px;
-  }
+  @include section-title($primary-text-color);
 }
 
 .about__wrap {
