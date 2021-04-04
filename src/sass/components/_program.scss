@@ -259,6 +259,7 @@
   position: absolute;
   display: block;
   content: '';
+  z-index: 100;
 
   @media screen and (max-width: $tablet - 1px) {
     top: 1239px;
@@ -267,13 +268,26 @@
     height: 137px;
     background-image: url('../images/program_mobile.png');
     background-size: 176px 137px;
-
-    z-index: 100;
   }
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .program__list::after {
       background-image: url('../images/program_mobile@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    top: 623px;
+    left: 287px;
+    width: 384px;
+    height: 280px;
+    background-image: url('../images/program_tablet.png');
+    background-size: 384px 280px;
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .program__list::after {
+      background-image: url('../images/program_tablet@2x.png');
     }
   }
 }
