@@ -107,31 +107,26 @@
   }
 }
 
-.hero-button {
+.hero-link {
   width: 260px;
   height: 48px;
   padding: 14px 1px;
   border: 2px solid transparent;
   background-color: $accent-color;
 
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $light-text-color;
+
   @media screen and (min-width: $desktop) {
     width: 354px;
     height: 70px;
     padding: 26px;
-  }
-
-  &__link {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.25;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: $light-text-color;
-
-    @media screen and (min-width: $desktop) {
-      font-size: 14px;
-    }
+    font-size: 14px;
   }
 }
