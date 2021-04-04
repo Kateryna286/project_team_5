@@ -105,9 +105,9 @@
   color: #ff6b09;
 }
 
-
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
+  position: absolute;
   right: 75px;
   top: 33.5px;
   display: block;
@@ -137,7 +137,6 @@
 
 @media (max-width: $desktop) {
   .consultation__button {
-    position: absolute;
     width: 260px;
     height: 48px;
     font-size: 12px;
