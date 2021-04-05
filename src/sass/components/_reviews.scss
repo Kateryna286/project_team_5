@@ -1,6 +1,6 @@
 .review {
   @include flex-center;
-  padding: 50px 0;
+  padding: 50px 0 224px 0;
 }
 
 .section__title {
@@ -25,7 +25,10 @@
 }
 
 .slider {
+  position: relative;
   @include flex-center;
+
+  height: auto;
   margin-top: 20px;
 
   @media (min-width: $tablet) {
@@ -37,10 +40,8 @@
   }
 }
 
-.slider__item {
-  position: relative;
-
-  padding: 20px 20px 30px 20px;
+.slick-initialized .slick-slide {
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
   @media (min-width: $tablet) {
     @include flex-center;
@@ -50,13 +51,11 @@
 
   @media (min-width: $desktop) {
     width: 1090px;
-    padding: 50px 0;
-
-    margin: 0 auto;
+    padding: 50px 100px;
   }
 }
 
-.slider__img-box {
+.slider__img--box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,8 +74,6 @@
   height: 90px;
 
   margin: 0 auto 20px auto;
-
-  background-color: tomato;
   @media (min-width: $desktop) {
     width: 150px;
     height: 150px;
@@ -84,7 +81,8 @@
 }
 
 .slider__icon {
-  margin: 0 auto;
+  margin-left: 50%;
+  transform: translatex(-50%);
   fill: #436eab;
   @include transition(fill);
 
@@ -171,54 +169,125 @@
   text-decoration: underline;
 }
 
-.slider__arrow {
-  position: absolute;
+.slick-next.slick-arrow {
+  top: 104%;
+  right: 0px;
 
-  &.arrow--left {
-    left: 0;
-    @media (min-width: $tablet) {
-      top: 25%;
-    }
-    @media (min-width: $desktop) {
-      top: 40%;
-    }
-  }
-  &.arrow--right {
-    right: 0;
-    @media (min-width: $tablet) {
-      top: 25%;
-    }
-    @media (min-width: $desktop) {
-      top: 40%;
-    }
-  }
-}
-
-.slider__pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 182px;
-  margin: 20px auto 0 auto;
+  background-image: url(../images/icons-svg/reviews-arrow-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
 
   @media (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    top: 48%;
+    right: -15px;
+  }
 
-    width: 558px;
+  @media (min-width: $desktop) {
+    top: 58%;
+    right: -82px;
   }
 }
 
-.slider__pagination-item {
-  &:nth-child(4),
-  &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7),
-  &:nth-child(8) {
-    @media (max-width: 767px) {
-      display: none;
+.slick-prev.slick-arrow {
+  top: 104%;
+  left: 0;
+
+  background-image: url(../images/icons-svg/reviews-arrow-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: $tablet) {
+    top: 48%;
+    left: -15px;
+  }
+  @media (min-width: $desktop) {
+    top: 58%;
+    left: -82px;
+  }
+}
+
+.slick-prev.slick-arrow::before,
+.slick-next.slick-arrow::before {
+  content: '';
+}
+
+.slick-dots {
+  bottom: -94px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $desktop) {
+    width: 558px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slick-dots li {
+  width: 54px;
+  height: 54px;
+
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $accent-color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & button {
+    &::before {
+      content: '';
     }
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &:first-child button {
+    background-image: url(../images/reviews2.jpg);
+  }
+
+  &:nth-child(2) button {
+    background-image: url(../images/reviews3.jpg);
+  }
+
+  &:nth-child(3) button {
+    background-image: url(../images/reviews4.jpg);
+  }
+
+  &:nth-child(4) button {
+    background-image: url(../images/reviews5.jpg);
+  }
+
+  &:nth-child(5) button {
+    background-image: url(../images/reviews6.jpg);
+  }
+
+  &:nth-child(6) button {
+    background-image: url(../images/reviews1.jpg);
+  }
+
+  &:nth-child(7) button {
+    background-image: url(../images/reviews8.jpg);
   }
 }
