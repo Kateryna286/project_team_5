@@ -118,6 +118,12 @@
   cursor: pointer;
   border: 2px solid #ff6b09;
   outline: none;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $light-text-color;
+    background-color: $accent-color;
+  }
 }
 
 @media (max-width: $mobile) {
