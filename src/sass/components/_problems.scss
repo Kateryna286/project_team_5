@@ -17,28 +17,19 @@
   }
 }
 
-.container {
-  // position: relative;
-}
-
 .problems__title {
-  //   min-width: 200px;
   width: 225px;
   margin-bottom: 27px;
   font-size: 20px;
   font-weight: 800;
   line-height: 1.35;
-  // padding: $container-padding-mobile;
-  // padding: 50px 0px 27px;
   color: $light-text-color;
   letter-spacing: 0.03em;
 }
 @media screen and (min-width: $tablet) {
   .problems__title {
     width: 450px;
-
     margin-bottom: 25px;
-
     font-size: 26px;
     line-height: 1.3;
   }
@@ -49,46 +40,20 @@
     width: 850px;
     font-size: 46px;
     margin-bottom: 70px;
-    // padding: 100px 0 70px;
   }
 }
 .problems__title--accent {
   color: $accent-color;
 }
 
-// .problems__svg {
-//   position: absolute;
-// }
-// @media screen and (min-width: $desktop) {
-//   .problems__svg {
-//     transform: translateY(9999px);
-//   }
-// }
-
 .problems__cards {
   @include flex-center;
-
   background-color: $light-text-color;
-  // max-width: 280px;
-  // margin-left: auto;
-  // margin-right: auto;
-
   width: 100%;
 }
 
-@media screen and (min-width: $tablet) {
-  .problems__cards {
-    // max-width: 688px;
-  }
-}
-@media screen and (min-width: $desktop) {
-  .problems__cards {
-    // max-width: 1314px;
-  }
-}
 .problems__list {
   list-style: none;
-
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
