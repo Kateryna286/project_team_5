@@ -21,9 +21,45 @@
     max-width: 1314px;
   }
 }
+
+.benefits__title {
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  @media screen and (max-width: $tablet - 1px) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+    line-height: 1.3;
+
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
 .benefits__list {
   list-style: none;
-  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
@@ -73,7 +109,6 @@
   counter-increment: list;
   color: $accent-color;
 
-  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 700;
   line-height: 1.219;
