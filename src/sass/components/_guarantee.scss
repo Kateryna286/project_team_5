@@ -76,14 +76,18 @@
 
 .block-border {
   position: absolute;
-  min-height: 150px;
   @media screen and (max-width: $desktop - 1px) {
     top: 0px;
     left: 7px;
-    height: 205px;
+    height: 280px;
     border-left: 1px dashed $secondary-text-color;
   }
-
+  @media screen and (min-width: 340px) {
+    height: 250px;
+  }
+  @media screen and (min-width: 441px) {
+    height: 205px;
+  }
   @media screen and (min-width: $tablet) {
     height: 200px;
   }
