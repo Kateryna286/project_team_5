@@ -1,0 +1,168 @@
+/* Кнопка "Консультация по телефону" в мобільному меню*/
+.consultation__button-mobilemenu {
+  font-weight: bold;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ff6b09;
+  line-height: 17px;
+  background-color: #ffffff;
+  border: 2px solid #ff6b09;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-transform: uppercase;
+  width: 100%;
+  height: 70px;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $light-text-color;
+    background-color: $accent-color;
+  }
+}
+
+@media (min-width: $tablet) {
+  .consultation__button-mobilemenu {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) {
+  .consultation__button-mobilemenu {
+    font-size: 12px;
+  }
+}
+
+/* Кнопка виклику мобільного меню */
+.menu-toggle {
+  position: absolute;
+  right: 35px;
+  top: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: $desktop) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow-y: scroll;
+  background-color: rgba(17, 21, 24, 0.9);
+  padding: 48px 40px;
+  -webkit-transform: translateX(100%) translateY(-100%);
+  transform: translateX(100%) translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+}
+
+@media (min-width: $tablet) {
+  .mobile-menu {
+    padding-left: 218px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 320px) {
+  .mobile-menu {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+}
+
+.mobile-menu__list {
+  font-style: normal;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 800;
+  font-size: auto;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-687;
+}
+
+.mobile-menu__link:hover {
+  color: #ff6b09;
+}
+
+.logo-mobile {
+  margin-left: 20px;
+  position: relative;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  font-style: bold;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.logo-mobile--second {
+  margin-left: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
