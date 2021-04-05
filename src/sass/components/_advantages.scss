@@ -1,6 +1,6 @@
 .section__advantages {
   display: flex;
-  background-color: #ffffff;
+  background-color: $light-text-color;
   padding-bottom: 50px;
   @media screen and(min-width: $desktop) {
     padding-top: 97px;
@@ -13,9 +13,7 @@
   margin-top: 0;
   margin-bottom: 0;
   @media screen and(min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
   }
 }
 
@@ -40,7 +38,7 @@
 .advantages__text {
   display: flex;
   font-family: Montserrat;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
   align-items: center;
