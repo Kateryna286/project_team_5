@@ -171,7 +171,7 @@
 
 .slick-next.slick-arrow {
   top: 110%;
-  right: 70px;
+  right: 20px;
 
   background-image: url(../images/icons-svg/reviews-arrow-right.svg);
   background-position: center;
@@ -193,7 +193,7 @@
 
 .slick-prev.slick-arrow {
   top: 110%;
-  left: 70px;
+  left: 10px;
 
   background-image: url(../images/icons-svg/reviews-arrow-left.svg);
   background-position: center;
@@ -224,7 +224,7 @@
   transform: translateX(-50%);
 
   @media (max-width: 767px) {
-    bottom: -175px;
+    bottom: -215px;
     width: 192px;
 
     margin-top: -10px;
