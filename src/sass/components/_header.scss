@@ -1,8 +1,8 @@
 /* Header */
 .site-header {
-  background-color: white;
+  background-color: $light-text-color;
   z-index: 1;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid $light-text-color;
 }
 
 .site-header__container {
@@ -26,19 +26,19 @@
   font-weight: 800;
   font-size: 26px;
   line-height: 32px;
-  font-style: bold;
+  font-style: 800;
   letter-spacing: 0.04em;
   color: #111518;
 }
 
 .logo--second {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 8px;
   line-height: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(17, 21, 24, 1);
+  color: dark-background-color;
 }
 
 .logo__icon {
@@ -57,7 +57,7 @@
 }
 
 .logo--accent {
-  color: #ff6b09;
+  color: $accent-color;
 }
 
 /* Меню в хедері*/
@@ -68,7 +68,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   list-style: none;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 14px;
 }
 
@@ -88,10 +88,10 @@
 }
 
 .menu__link {
-  color: #b9b9b9;
+  color: $secondary-text-color;
   display: flex;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.02em;
@@ -103,20 +103,19 @@
 
 .menu__link:hover,
 .menu__link:focus {
-  color: #ff6b09;
+  color: $accent-color;
 }
 
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
-  right: 95px;
   top: 33.5px;
   display: block;
   box-sizing: border-box;
   text-transform: uppercase;
-  color: #ff6b09;
-  background-color: #ffffff;
+  color: $accent-color;
+  background-color: $light-text-color;
   cursor: pointer;
-  border: 2px solid #ff6b09;
+  border: 2px solid $accent-color;
   outline: none;
   &:hover,
   &:focus {
@@ -135,6 +134,18 @@
 @media (min-width: $mobile) and (max-width: $tablet) {
   .consultation__button {
     height: 30px;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .consultation__button {
+    margin-left: 239px;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .consultation__button {
+    margin-left: 30px;
   }
 }
 
