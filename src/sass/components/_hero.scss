@@ -1,10 +1,12 @@
 .hero-section {
-  width: 100%;
   padding-top: 50px;
-
+  padding-bottom: 50px;
   background-color: $light-text-color;
-  background: url('/images/hero_Vector.png') no-repeat bottom left;
-  background-size: cover;
+  background-image: url('/images/hero_Vector.png');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
   box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
 
   @media screen and (min: device pixel ratio 2px),
@@ -13,46 +15,22 @@
     background-image: url('/images/hero_Vector@2x.png');
   }
 
-  @media screen and (max-width: 767px) {
-    min-height: 509px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 50px;
-  }
-
   @media screen and (min-width: $desktop) {
-    padding-top: 50px;
+    padding-bottom: 96px;
   }
 }
 
 .hero-container {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   min-height: 509px;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
 
   @media screen and (min-width: $tablet) {
     position: relative;
     min-height: 399px;
-    text-align: left;
   }
 
   @media screen and (min-width: $desktop) {
     min-height: 650px;
-    text-align: left;
   }
-
-  // @media screen and (min-width: 1680px) {
-  //   max-width: 1680px;
-  // }
 }
 
 .hero-title {
@@ -68,6 +46,7 @@
   color: $primary-text-color;
 
   @media screen and (min-width: $tablet) {
+    margin-top: 20px;
     font-size: 26px;
   }
 
@@ -120,20 +99,26 @@
 }
 
 .hero-link {
+  display: block;
   max-width: 260px;
   height: 48px;
   padding: 14px 1px;
 
   @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
   }
 
   @media screen and (min-width: $tablet) {
-    // display: inline-block;
+    margin-bottom: 93px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1343px) {
+    display: inline-block;
   }
 
   @media screen and (min-width: $desktop) {
-    display: block;
     margin: 0 auto 145px 0;
     max-width: 354px;
     height: 70px;
@@ -143,23 +128,19 @@
 
 .hero-image {
   width: 208px;
+  margin-right: auto;
+  margin-left: auto;
 
   @media screen and (min-width: $tablet) {
     position: absolute;
     bottom: 65px;
-    right: 18.25px;
+    right: 37px;
     width: 376px;
   }
 
   @media screen and (min-width: $desktop) {
     top: -50px;
-    right: -42px;
+    right: 0;
     width: 742px;
-  }
-
-  @media screen and (min-width: 1680px) {
-    top: -70px;
-    right: -100px;
-    width: 842px;
   }
 }
