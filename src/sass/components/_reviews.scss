@@ -85,6 +85,7 @@
   transform: translatex(-50%);
   fill: #436eab;
   @include transition(fill);
+  cursor: pointer;
 
   &:hover,
   &:focus {
