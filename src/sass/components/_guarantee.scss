@@ -7,6 +7,8 @@
 .guarantee__container {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: $light-background-color;
   @media screen and(min-width: $tablet) {
     padding-left: 79px;
@@ -79,14 +81,20 @@
   @media screen and (max-width: $desktop - 1px) {
     top: 0px;
     left: 7px;
-    height: 280px;
+    height: 300px;
     border-left: 1px dashed $secondary-text-color;
   }
-  @media screen and (min-width: 340px) {
-    height: 250px;
+  @media screen and (min-width: 353px) {
+    height: 280px;
   }
-  @media screen and (min-width: 441px) {
-    height: 205px;
+  @media screen and (min-width: 353px) {
+    height: 260px;
+  }
+  @media screen and (min-width: 457px) {
+    height: 220px;
+  }
+  @media screen and (min-width: 465px) {
+    height: 200px;
   }
   @media screen and (min-width: $tablet) {
     height: 200px;

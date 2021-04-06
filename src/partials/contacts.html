@@ -1,16 +1,17 @@
-<section class="contacts" id="contacts">
+<section class="contacts scrollto" id="contacts">
     <div class="container contacts__container ">
         <h2 class="contacts__title">Регистрация на <span class="accent">бесплатную</span> телефонную <span
                 class="accent">консультацию</span> по нюансам ВНО
             по английскому языку</h2>
         <form class="contacts__form">
             <label class="contacts__label" for="name">
-                Оставь заявку на участие в <span class="accent">бесплатном занятии.</span><br>
+                Оставьте заявку на участие в <span class="accent">бесплатном занятии.</span><br>
                 С вами свяжется консультант и ответит на вопросы
             </label>
             <input class="contacts__input contacts__input--first" type="text" name="name" id="name" placeholder="Имя*" title="Имя должно состоять только из букв кириллицы и/или латиницы" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{1,}"  
              required>
-            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*" title="Телефон должен состоять не менее, чем из 6 цифр" pattern="[0-9]{6,}" required>
+            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*"
+                title="Телефон может быть указан в формате +380ХХХХХХХХХ, 80ХХХХХХХХХ либо 0ХХХХХХХХХ" pattern="^[\+]?[3]?[8]?[0][0-9]{9}" required>
             <button class="contacts__btn btn" type="submit">ХОЧУ НА БЕСПЛАТНОЕ ЗАНЯТИЕ</button>
         </form>
     </div>
