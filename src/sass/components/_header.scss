@@ -6,12 +6,13 @@
 }
 
 .site-header__container {
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: flex;
   min-height: 79px;
   padding-top: 33.5px;
+  justify-content: space-between;
 }
 
 @media (max-width: 1343px) {
@@ -61,7 +62,6 @@
 }
 
 /* Меню в хедері*/
-.menu,
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,28 +112,20 @@
     display: none;
   }
 
-  @media (min-width: $mobile) and (max-width: $tablet) {
-    height: 30px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: $desktop -1) {
     margin-left: 239px;
   }
 
-  @media (min-width: $mobile) and (max-width: $tablet) {
+  @media (min-width: $mobile) and (max-width: $tablet - 1) {
     margin-left: 30px;
   }
 
   @media (min-width: $desktop) {
-    width: 336px;
-    height: 79px;
     font-size: 14px;
     line-height: 17px;
   }
 
   @media (max-width: $desktop) {
-    width: 270px;
-    height: 46px;
     font-size: 12px;
     line-height: 15px;
   }
