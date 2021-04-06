@@ -1,18 +1,20 @@
 .program {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 537px;
+
+  overflow: hidden;
 
   background-color: $dark-background-color;
 
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
-    padding-bottom: 189px;
+    padding-bottom: 392px;
   }
 
   @media screen and (min-width: $desktop) {
     padding-top: 120px;
-    padding-bottom: 164px;
+    padding-bottom: 363px;
   }
 
   &__header {
