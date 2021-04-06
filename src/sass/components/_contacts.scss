@@ -164,11 +164,13 @@
 }
 
 .contacts__input:not(:placeholder-shown):required:valid {
-  border-color: rgb(109, 170, 109);
+  border-color: rgba(219, 169, 113, 1);
+  box-shadow: 0 0 30px rgba(219, 169, 113, 1);
 }
 
 .contacts__input:not(:placeholder-shown):required:invalid {
-  border-color: rgb(175, 57, 57);
+  border-color: rgba(194, 30, 30, 1);
+  box-shadow: 0 0 30px rgba(194, 30, 30, 1);
 }
 
 .contacts__btn {
