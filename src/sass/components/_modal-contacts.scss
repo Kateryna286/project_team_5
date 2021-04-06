@@ -1,0 +1,299 @@
+.backdrop {
+  @media (min-width: 320px) {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-dark-trnsparent;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  @include flex-center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  width: 710px;
+  height: 520px;
+  flex-direction: column;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgb(5, 3, 2);
+  box-shadow: 0 0 7px rgba(219, 169, 113, 0.5);
+
+  @media (min-width: $desktop) {
+    min-width: 1120px;
+    min-height: 840px;
+  }
+}
+
+.modal__container {
+  position: relative;
+  z-index: 20;
+
+  @media screen and(min-width: $desktop) {
+    padding-top: 50px;
+    padding-bottom: 32px;
+  }
+}
+
+.modal__title {
+  @media screen and(min-width: $tablet) {
+    width: 90%;
+  }
+
+  @media screen and(min-width: $desktop) {
+    font-size: 40px;
+  }
+}
+
+.modal__label {
+  @media screen and(min-width: $tablet) {
+    width: 92%;
+  }
+
+  @media screen and(min-width: $desktop) {
+    width: 60%;
+  }
+}
+
+.modal__closeIcon {
+  width: 30px;
+  height: 30px;
+  color: $accent-color;
+}
+
+.modal__closeButton {
+  @include flex-center;
+  position: absolute;
+  z-index: 20;
+  top: 8px;
+  right: 8px;
+  fill: $accent-color;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal__closeButton:hover,
+.modal__closeButton:focus {
+  animation-name: CloseIcon;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.modal__fireIcon {
+  position: absolute;
+  z-index: 5;
+  bottom: 15px;
+  left: 5px;
+  fill: rgb(46, 42, 42);
+  width: 357.5px;
+  height: 250px;
+  animation-name: fireIconAnimSecond;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  @media screen and(min-width: $desktop) {
+    bottom: 15px;
+    left: 55px;
+    width: 500px;
+    height: 350px;
+  }
+}
+
+.modal__fireIcon-second {
+  position: absolute;
+  z-index: 5;
+  bottom: 5px;
+  left: -30px;
+  width: 375px;
+  height: 300px;
+  fill: rgb(34, 30, 30);
+  animation-name: fireIconAnimFirst;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 5px;
+    left: 20px;
+    width: 500px;
+    height: 400px;
+  }
+}
+
+.modal__fireIcon-third {
+  position: absolute;
+  z-index: 4;
+  bottom: 90px;
+  left: 80px;
+  fill: rgba(104, 51, 15, 0.6);
+  animation-name: flameflytwo;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 160px;
+    left: 190px;
+  }
+}
+
+.modal__fireIcon-forth {
+  position: absolute;
+  z-index: 4;
+  bottom: 100px;
+  left: 50px;
+  fill: rgba(116, 61, 24, 0.6);
+  animation-name: flameflythree;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1500ms;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 110px;
+    left: 430px;
+  }
+}
+
+.modal__fireIcon-fifth {
+  position: absolute;
+  z-index: 4;
+  bottom: 50px;
+  left: 280px;
+  fill: rgba(112, 64, 33, 0.6);
+  animation-name: flameflytwo;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 120px;
+    left: 120px;
+  }
+}
+
+.modal__fireIcon-sixth {
+  position: absolute;
+  z-index: 4;
+  bottom: 140px;
+  left: 230px;
+  fill: rgba(99, 54, 24, 0.6);
+  animation-name: flamefly;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 3200ms;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 200px;
+    left: 320px;
+  }
+}
+
+.modal__fireIcon-seventh {
+  position: absolute;
+  z-index: 4;
+  bottom: 230px;
+  left: 150px;
+  fill: rgba(124, 75, 42, 0.5);
+  animation-name: flamefly;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 5200ms;
+
+  @media screen and(min-width: $desktop) {
+    bottom: 150px;
+    left: 150px;
+  }
+}
+
+@keyframes CloseIcon {
+  0% {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+
+  70%,
+  100% {
+    transform: rotate(0);
+    transform-origin: center;
+  }
+}
+
+@keyframes fireIconAnimFirst {
+  50% {
+    transform: scale(0.98, 1) translate(0, 2px) rotate(-1deg);
+  }
+}
+
+@keyframes fireIconAnimSecond {
+  50% {
+    transform: scale(0.85, 1) translate(0, 5px) rotate(-2deg);
+  }
+}
+
+@keyframes flamefly {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -150px);
+    opacity: 0;
+  }
+}
+
+@keyframes flameflytwo {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -150px);
+    opacity: 0;
+  }
+}
+
+@keyframes flameflythree {
+  0% {
+    transform: translate(0);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -150px);
+    opacity: 0;
+  }
+}
