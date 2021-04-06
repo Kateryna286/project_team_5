@@ -170,8 +170,8 @@
 }
 
 .slick-next.slick-arrow {
-  top: 104%;
-  right: 0px;
+  top: 110%;
+  right: 70px;
 
   background-image: url(../images/icons-svg/reviews-arrow-right.svg);
   background-position: center;
@@ -187,13 +187,13 @@
 
   @media (min-width: $desktop) {
     top: 58%;
-    right: -82px;
+    right: -25px;
   }
 }
 
 .slick-prev.slick-arrow {
-  top: 104%;
-  left: 0;
+  top: 110%;
+  left: 70px;
 
   background-image: url(../images/icons-svg/reviews-arrow-left.svg);
   background-position: center;
@@ -209,7 +209,7 @@
   }
   @media (min-width: $desktop) {
     top: 58%;
-    left: -82px;
+    left: -25px;
   }
 }
 
@@ -222,6 +222,14 @@
   bottom: -94px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 767px) {
+    bottom: -175px;
+    width: 192px;
+
+    margin-top: -10px;
+    margin-left: -10px;
+  }
 
   @media (min-width: $desktop) {
     width: 558px;
@@ -239,13 +247,20 @@
   border-radius: 50%;
   overflow: hidden;
 
+  @media (max-width: 767px) {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
   &:hover,
   &:focus {
     border: 2px solid $accent-color;
   }
 
   &:not(:last-child) {
-    margin-right: 30px;
+    @media (min-width: $tablet) {
+      margin-right: 30px;
+    }
   }
 
   & button {
