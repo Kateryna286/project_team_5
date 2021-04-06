@@ -6,6 +6,7 @@
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: left bottom;
+
   box-shadow: -5px 21px 26px rgba(167, 111, 111, 0.04);
 
   @media screen and (min: device pixel ratio 2px),
@@ -59,6 +60,7 @@
 .hero-subtitle {
   display: flex;
   flex-direction: column;
+
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -69,6 +71,9 @@
   letter-spacing: 0.08em;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: $tablet) {
+  }
 
   @media screen and (min-width: $desktop) {
     display: inline-block;
