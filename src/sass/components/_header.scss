@@ -108,60 +108,31 @@
 
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
-  top: 33.5px;
-  display: block;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  color: $accent-color;
-  background-color: $light-text-color;
-  cursor: pointer;
-  border: 2px solid $accent-color;
-  outline: none;
-  &:hover,
-  &:focus {
-    outline: none;
-    color: $light-text-color;
-    background-color: $accent-color;
-  }
-}
-
-@media (max-width: $mobile) {
-  .consultation__button {
+  @media (max-width: $mobile) {
     display: none;
   }
-}
 
-@media (min-width: $mobile) and (max-width: $tablet) {
-  .consultation__button {
+  @media (min-width: $mobile) and (max-width: $tablet) {
     height: 30px;
   }
-}
 
-@media (min-width: $tablet) and (max-width: $desktop) {
-  .consultation__button {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     margin-left: 239px;
   }
-}
 
-@media (min-width: $mobile) and (max-width: $tablet) {
-  .consultation__button {
+  @media (min-width: $mobile) and (max-width: $tablet) {
     margin-left: 30px;
   }
-}
 
-@media (min-width: $desktop) {
-  .consultation__button {
+  @media (min-width: $desktop) {
     width: 336px;
     height: 79px;
     font-size: 14px;
     line-height: 17px;
   }
-}
 
-@media (max-width: $desktop) {
-  .consultation__button {
-    position: absolute;
-    width: 260px;
+  @media (max-width: $desktop) {
+    width: 270px;
     height: 46px;
     font-size: 12px;
     line-height: 15px;
