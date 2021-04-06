@@ -165,12 +165,10 @@
 
 .contacts__input:not(:placeholder-shown):required:valid {
   border-color: rgba(219, 169, 113, 1);
-  box-shadow: 0 0 20px rgba(219, 169, 113, 1);
 }
 
 .contacts__input:not(:placeholder-shown):required:invalid {
   border-color: rgba(168, 30, 30, 1);
-  box-shadow: 0 0 30px rgba(168, 30, 30, 1);
 }
 
 .contacts__btn {
