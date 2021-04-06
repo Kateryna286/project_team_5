@@ -10,7 +10,8 @@
             </label>
             <input class="contacts__input contacts__input--first" type="text" name="name" id="name" placeholder="Имя*" title="Имя должно состоять только из букв кириллицы и/или латиницы" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{1,}"  
              required>
-            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*" title="Телефон должен состоять не менее, чем из 6 цифр" pattern="[0-9]{6,}" required>
+            <input class="contacts__input" type="tel" name="tel" placeholder="Телефон*"
+                title="Телефон должен быть указан в формате +380ХХХХХХХХХ" pattern="^[\+]?[3]?[8]?[0][0-9]{9}" required>
             <button class="contacts__btn btn" type="submit">ХОЧУ НА БЕСПЛАТНОЕ ЗАНЯТИЕ</button>
         </form>
     </div>
