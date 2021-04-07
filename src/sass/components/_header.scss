@@ -110,6 +110,10 @@
 .consultation__button {
   @media (max-width: $mobile) {
     display: none;
+  }  
+
+  @media (max-width: $desktop) {
+    margin-right: 40px;
   }
 }
 
