@@ -274,29 +274,50 @@
 
   &:first-child button {
     background-image: url(../images/reviews2.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews2@2x.jpg);
+    }
   }
 
   &:nth-child(2) button {
     background-image: url(../images/reviews3.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews3@2x.jpg);
+    }
   }
 
   &:nth-child(3) button {
     background-image: url(../images/reviews4.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews4@2x.jpg);
+    }
   }
 
   &:nth-child(4) button {
     background-image: url(../images/reviews5.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews5@2x.jpg);
+    }
   }
 
   &:nth-child(5) button {
     background-image: url(../images/reviews6.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews6@2x.jpg);
+    }
   }
 
   &:nth-child(6) button {
     background-image: url(../images/reviews1.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews1@2x.jpg);
+    }
   }
 
   &:nth-child(7) button {
     background-image: url(../images/reviews8.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/reviews8@2x.jpg);
+    }
   }
 }
