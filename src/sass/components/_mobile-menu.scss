@@ -183,11 +183,16 @@
 
 /*Accordeon form*/
 .mobile-menuover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
+  @media screen and(max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .panel {
