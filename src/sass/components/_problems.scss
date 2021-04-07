@@ -50,6 +50,7 @@
   @include flex-center;
   background-color: $light-text-color;
   width: 100%;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
 .problems__list {
@@ -60,7 +61,6 @@
   letter-spacing: 0.08em;
   color: $primary-text-color;
   padding: 20px 30px;
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   counter-reset: list;
 }
 @media screen and (min-width: $tablet) {
