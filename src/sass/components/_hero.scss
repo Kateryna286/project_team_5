@@ -30,6 +30,10 @@
 
   @media screen and (min-width: $desktop) {
     min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
   }
 }
 
@@ -53,7 +57,6 @@
   @media screen and (min-width: $desktop) {
     max-width: 642px;
     font-size: 58px;
-    margin-top: 125px;
   }
 }
 
@@ -99,19 +102,10 @@
 }
 
 .hero-link {
-  display: block;
-  max-width: 260px;
   height: 48px;
-  padding: 14px 1px;
 
   @media screen and (max-width: 767px) {
-    margin-right: auto;
-    margin-left: auto;
     margin-bottom: 30px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 93px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1343px) {
