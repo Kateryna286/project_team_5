@@ -108,9 +108,9 @@
 
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet - 1px) {
     display: none;
-  }  
+  }
 
   @media (max-width: $desktop) {
     margin-right: 40px;
