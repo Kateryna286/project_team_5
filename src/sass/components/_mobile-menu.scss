@@ -270,13 +270,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 25px;
+  height: 34px;
   width: 246px;
   padding: 0 5px 0 5px;
   border: 1px solid rgba(207, 126, 72, 1);
   background-color: rgba(204, 173, 137, 0.2);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.8);
@@ -292,8 +292,8 @@
 
   &::placeholder {
     font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 1.25;
     letter-spacing: 0.08em;
     color: rgba(223, 197, 172, 1);
   }
