@@ -112,7 +112,7 @@
     display: none;
   }
 
-  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+  /*@media (min-width: $tablet) and (max-width: $desktop - 1px) {
     margin-left: 239px;
   }
 
@@ -128,5 +128,41 @@
   @media (max-width: $desktop) {
     font-size: 12px;
     line-height: 15px;
+  }*/
+}
+
+.buttons {
+  display: flex;
+}
+
+/* Кнопка виклику мобільного меню */
+.menu-toggle {
+  top: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  display: block;
+  align-items: center;
+  color: $light-text-color;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: $desktop) {
+  .menu-toggle {
+    display: none;
   }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  top: 16px;
+  right: 16px;
+  color: $light-text-color;
 }
