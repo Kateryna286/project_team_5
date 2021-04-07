@@ -50,7 +50,7 @@
   height: 20.39px;
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet - 1px) {
   .logo__icon {
     width: 22px;
     height: 30px;
@@ -111,24 +111,6 @@
   @media (max-width: $mobile) {
     display: none;
   }
-
-  /*@media (min-width: $tablet) and (max-width: $desktop - 1px) {
-    margin-left: 239px;
-  }
-
-  @media (min-width: $mobile) and (max-width: $tablet - 1px) {
-    margin-left: 30px;
-  }
-
-  @media (min-width: $desktop) {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  @media (max-width: $desktop) {
-    font-size: 12px;
-    line-height: 15px;
-  }*/
 }
 
 .buttons {
