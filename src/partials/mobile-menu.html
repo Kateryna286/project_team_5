@@ -40,8 +40,27 @@
     </div>
 
     <!-- Кнопка "Консультация по телефону" в мобільному меню -->
-    <button class="consultation__button-mobilemenu btn-reverse" type="button">
+    <!-- <button class="consultation__button-mobilemenu btn-reverse" type="button">
       Консультация по телефону
-    </button>
+    </button> -->
+    <div class="mobile-menuover">
+      <button class="accordeon__openbutton accordeon btn-reverse">Консультация по телефону</button>
+      <div class="panel">
+        <div class="accordeon-container">
+          <form class="accordeon__form" id="form" action="">
+            <label class="accordeon__label">Оставьте заявку, чтобы получить <span class="accent">бесплатную</span>
+              консультацию и поучаствовать в <span class="accent">бесплатном</span> занятии</label>
+            <input class="accordeon__input accordeon__input--first _req _name" type="text" name="name" id="name"
+              placeholder="Имя*" title="Используйте только буквы кириллицы и/или латиницы"
+              pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{1,}" required>
+    
+            <input class="accordeon__input _req _phone" type="tel" id="phone" name="tel" placeholder="Телефон*"
+              title="Укажите номер телефона в формате +380********* либо 0*********" pattern="^[\+]?[3]?[8]?[0][0-9]{9}"
+              required>
+            <button class="accordeon__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
