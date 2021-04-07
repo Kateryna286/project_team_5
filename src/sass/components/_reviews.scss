@@ -26,6 +26,7 @@
 
   height: auto;
   margin-top: 20px;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
   @media (min-width: $tablet) {
     margin-top: 30px;
@@ -37,8 +38,7 @@
 }
 
 .slick-initialized .slick-slide {
-  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-
+  padding: 20px 20px 0 20px;
   @media (min-width: $tablet) {
     @include flex-center;
     width: 688px;
@@ -163,7 +163,7 @@
 }
 
 .slick-next.slick-arrow {
-  top: 110%;
+  top: 115%;
   right: 20px;
 
   background-image: url(../images/icons-svg/reviews-arrow-right.svg);
@@ -185,7 +185,7 @@
 }
 
 .slick-prev.slick-arrow {
-  top: 110%;
+  top: 115%;
   left: 10px;
 
   background-image: url(../images/icons-svg/reviews-arrow-left.svg);
