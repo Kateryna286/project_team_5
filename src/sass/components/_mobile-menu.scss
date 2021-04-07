@@ -1,56 +1,8 @@
 /* Кнопка "Консультация по телефону" в мобільному меню*/
 .consultation__button-mobilemenu {
-  @media (min-width: $tablet) {
-    .consultation__button-mobilemenu {
-      display: none;
-    }
-  }
-}
-
-/* Кнопка виклику мобільного меню */
-.menu-toggle {
-  position: absolute;
-  top: 40px;
-  min-height: 40px;
-  min-width: 40px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  color: $light-text-color;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-}
-
-@media (min-width: $desktop) {
-  .menu-toggle {
+  @media (min-width: 480px) {
     display: none;
   }
-}
-
-@media (min-width: $tablet) and (max-width: $desktop) {
-  .menu-toggle {
-    margin-left: 539px;
-  }
-}
-
-@media (min-width: $mobile) and (max-width: $tablet) {
-  .menu-toggle {
-    margin-left: 330px;
-  }
-}
-
-@media (max-width: $mobile) {
-  .menu-toggle {
-    margin-left: 179px;
-  }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-container {
@@ -76,7 +28,7 @@
   transform: translateX(0) translateY(0);
 }
 
-.menu-container .menu-toggle {
+.menu-container {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -84,6 +36,7 @@
 }
 
 .mobile-menu {
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,30 +50,28 @@
   justify-content: center;
 }
 
-@media (min-width: $tablet) {
-  .mobile-menu {
-    padding-left: 218px;
-    font-size: 26px;
-  }
-}
-
-@media (min-width: 320px) {
-  .mobile-menu {
-    margin-top: 108.53px;
-    margin-bottom: 50px;
-    font-size: 14px;
-  }
-}
-
 .mobile-menu__list {
-  font-style: normal;
   color: $light-text-color;
   font-style: normal;
   font-weight: 800;
-  font-size: 26px;
   line-height: 180%;
   line-height: 1.175;
   letter-spacing: 0.02em;
+
+  @media (min-width: $tablet) {
+    padding-left: 218px;
+  }
+
+  @media (min-width: 480px) {
+    margin-top: 72px;
+    font-size: 26px;
+  }
+
+  @media (min-width: 320px) and (max-width: 479px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -138,9 +89,8 @@
   color: $accent-color;
 }
 
+/* Логотип */
 .logo-mobile {
-  margin-left: 20px;
-  position: relative;
   font-weight: 800;
   font-size: 26px;
   line-height: 32px;
@@ -150,7 +100,6 @@
 }
 
 .logo-mobile--second {
-  margin-left: 20px;
   font-style: normal;
   font-weight: 800;
   font-size: 8px;
@@ -158,4 +107,54 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $light-text-color;
+}
+
+.logo-mobile__icon {
+  position: relative;
+  top: 4px;
+  margin: 0 4px;
+  width: 14.95px;
+  height: 20.39px;
+}
+
+@media screen and (min-width: $tablet) {
+  .logo-mobile__icon {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo-mobile--accent {
+  color: $accent-color;
+}
+
+/* Кнопка закриття мобільного меню */
+.menu-close {
+  top: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  display: block;
+  align-items: center;
+  color: $light-text-color;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.menu-close:hover,
+.menu-close:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-close {
+  top: 16px;
+  right: 16px;
+  color: $light-text-color;
+}
+
+.logo-button {
+  display: flex;
+  justify-content: space-between;
 }
