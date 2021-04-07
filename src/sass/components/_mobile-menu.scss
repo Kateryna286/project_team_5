@@ -180,3 +180,145 @@
   display: flex;
   justify-content: space-between;
 }
+
+/*Accordeon form*/
+.mobile-menuover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordeon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ff6b09;
+  border-top: none;
+  padding: 10px 5px;
+  min-height: 192px;
+  width: 260px;
+  background-color: rgba(48, 36, 26, 0.4);
+}
+
+.accordeon__openbutton {
+  font-weight: bold;
+  color: #ff6b09;
+  letter-spacing: 0.08em;
+  text-align: center;
+  transition: 0.4s;
+  font-size: 12px;
+  line-height: 15px;
+  border: 2px solid #ff6b09;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  width: 260px;
+  height: 48px;
+  padding-left: 1px;
+  padding-right: 1px;
+  transition: 0.4s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.accordeon__label {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.accordeon__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accordeon__form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(17, 21, 24, 0.8) url('../images/spinner.gif') center / 70px no-repeat;
+}
+
+.accordeon__form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordeon__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25px;
+  width: 246px;
+  padding: 0 5px 0 5px;
+  border: 1px solid rgba(207, 126, 72, 1);
+  background-color: rgba(204, 173, 137, 0.2);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.8);
+
+  &--first {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and(min-width: $mobile) {
+    width: 246px;
+  }
+
+  &::placeholder {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+    color: rgba(223, 197, 172, 1);
+  }
+}
+
+.accordeon__input:not(:placeholder-shown):required:valid {
+  border: 1px solid rgba(219, 169, 113, 1);
+}
+
+.accordeon__input:not(:placeholder-shown):required:invalid {
+  border: 1px solid rgba(214, 12, 12, 1);
+}
+
+.accordeon__btn {
+  @include flex-center;
+  width: 220px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $accent-color;
+  margin-top: 10px;
+
+  .accordeon:hover,
+  .accordeon:focus {
+    outline: none;
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+}
