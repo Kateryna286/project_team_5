@@ -31,12 +31,6 @@
     justify-items: left;
   }
 
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    justify-items: left;
-  }
-
   @media screen and (min-width: $tablet) {
     padding-top: 20px;
     padding-bottom: 65px;
@@ -87,9 +81,7 @@
 
   color: $primary-text-color;
 
-  @media screen and (min-width: $desktop) {
-    display: block;
-
+  @media screen and (min-width: $tablet) {
   }
 
   &--grey {
@@ -128,7 +120,6 @@
 }
 
 .hero-image {
-  width: 208px;
   @media screen and (max-width: 767px) {
     align-self: center;
   }
@@ -137,10 +128,6 @@
     position: absolute;
     right: 18px;
     bottom: 65px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    top: 0;
   }
 
   @media screen and (min-width: $desktop) {
