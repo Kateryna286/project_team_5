@@ -1,6 +1,6 @@
 .hero-section {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   background-color: $light-text-color;
   background-image: url('/images/hero_Vector.png');
   background-size: 100vw;
@@ -13,6 +13,9 @@
     (min-resolution: 2dppx) {
     background-image: url('/images/hero_Vector@2x.png');
   }
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 50px;
+  }
 
   @media screen and (min-width: $desktop) {
     padding-bottom: 96px;
@@ -20,7 +23,13 @@
 }
 
 .hero-container {
-  min-height: 509px;
+  padding-bottom: 47px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+  }
 
   @media screen and (max-width: 767px) {
     display: flex;
@@ -29,8 +38,9 @@
   }
 
   @media screen and (min-width: $tablet) {
+    padding-top: 20px;
+    padding-bottom: 65px;
     position: relative;
-    min-height: 399px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -79,6 +89,7 @@
 
   @media screen and (min-width: $desktop) {
     display: block;
+
   }
 
   &--grey {
@@ -118,21 +129,29 @@
 
 .hero-image {
   width: 208px;
-
   @media screen and (max-width: 767px) {
     align-self: center;
   }
 
   @media screen and (min-width: $tablet) {
     position: absolute;
-    bottom: 65px;
     right: 18px;
-    width: 376px;
+    bottom: 65px;
   }
 
   @media screen and (min-width: $desktop) {
     top: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 680px;
+    top: 85px;
     right: 0;
-    width: 742px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 843px;
+    top: 0;
+    right: -96px;
   }
 }
