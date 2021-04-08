@@ -108,6 +108,8 @@
 
 /* Кнопка "Консультация по телефону" */
 .consultation__button {
+  cursor: pointer;
+  
   @media (max-width: $tablet - 1px) {
     display: none;
   }
