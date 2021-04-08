@@ -1,6 +1,7 @@
 .contacts {
   margin: 0 auto;
-  min-width: 320px;
+  width: 100%;
+  // min-width: 320px;
   height: 100%;
   background-color: $primary-text-color;
   background-image: linear-gradient(to right, $primary-dark-trnsparent, $primary-dark-trnsparent),
@@ -17,12 +18,10 @@
 
   @media screen and(min-width: $tablet) {
     background-position: center;
-    min-width: 768px;
     height: 520px;
   }
 
   @media screen and(min-width: $desktop) {
-    max-width: 1680px;
     height: 840px;
   }
 }
